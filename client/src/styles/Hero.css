@@ -212,7 +212,6 @@
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    min-height: 100vh;
   }
 
   .hero-content {
