@@ -18,12 +18,12 @@ const Navbar = () => {
       </div>
 
       <div className="menu-desktop">
-        <a href="#home">Home</a>
-        <a href="#about">Conócenos</a>
-        <a href="#reviews">Reseñas</a>
-        <a href="#plans">Planes</a>
-        <a href="#team">Equipo</a>
-        <a href="#store">Tienda</a>
+        <a href="home">Home</a>
+        <a href="about">Conócenos</a>
+        <a href="reviews">Reseñas</a>
+        <a href="plans">Planes</a>
+        <a href="team">Equipo</a>
+        <a href="store">Tienda</a>
       </div>
 
       <div className="navbar-right">
