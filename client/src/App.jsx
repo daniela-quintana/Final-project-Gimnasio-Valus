@@ -9,6 +9,9 @@ import TeamPage from "./components/pages/TeamPage";
 import ShopPage from "./components/pages/ShopPage";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
+import FeedbackPage from "./components/pages/FeedbackPage";
+import ThanksPage from "./components/pages/ThanksPage";
+import ProfilePage from "./components/pages/ProfilePage";
 import "./App.css";
 
 const Home = () => (
@@ -17,8 +20,8 @@ const Home = () => (
     <section id="about"><AboutUsPage /></section>
     <section id="reviews"><ReviewsPage /></section>
     <section id="plans"><PlansPage /></section>
-    <section id="store"><ShopPage /></section>
     <section id="team"><TeamPage /></section>
+    <section id="store"><ShopPage /></section>
   </>
 );
 
@@ -30,6 +33,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
+        <Route path="/thanks" element={<ThanksPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

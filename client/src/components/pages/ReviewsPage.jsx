@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../styles/Reviews.css";
 
 const reviews = [
@@ -30,6 +31,7 @@ const reviews = [
 
 const ReviewsPage = () => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,19 +46,20 @@ const ReviewsPage = () => {
     <section className="reviews-section">
       <p className="reviews-subtitle">Reseñas</p>
       <h2 className="reviews-title">Nuestros alumnos hablan</h2>
-
       <div className="reviews-card">
         <img src={review.image} alt={review.name} />
         <div className="reviews-card-overlay">
           <div className="reviews-stars">
-            {"★".repeat(review.stars)}{"☆".repeat(5 - review.stars)}
+            {"★".repeat(review.stars)}
+            {"☆".repeat(5 - review.stars)}
           </div>
           <p className="reviews-quote">{review.quote}</p>
           <span className="reviews-author">{review.name}</span>
         </div>
       </div>
-
-      <button className="reviews-btn">Deja tu comentario</button>
+      <button className="reviews-btn" onClick={() => navigate("/feedback")}>
+        Deja tu comentario
+      </button>{" "}
     </section>
   );
 };
