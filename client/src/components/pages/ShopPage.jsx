@@ -4,37 +4,37 @@ const products = [
   {
     id: 1,
     name: "Barra proteíca",
-    price: "$2000",
+    price: "$2.000",
     image: "/src/assets/imgs/photo-1554886729-fe8d4499a108.avif",
   },
   {
     id: 2,
     name: "Agua hidratante",
-    price: "$1800",
+    price: "$1.800",
     image: "/src/assets/imgs/photo-1722925541142-5db2668ca492.avif",
   },
   {
     id: 3,
     name: "Galletas de proteína",
-    price: "$1800",
+    price: "$1.800",
     image: "/src/assets/imgs/photo-1621057621391-7ed446a24b41.avif",
   },
   {
     id: 4,
     name: "Creatina",
-    price: "$1800",
+    price: "$1.800",
     image: "/src/assets/imgs/premium_photo-1661284821625-9400498df354.avif",
   },
   {
     id: 5,
     name: "Barra proteíca",
-    price: "$2000",
+    price: "$2.000",
     image: "/src/assets/imgs/photo-1554886729-fe8d4499a108.avif",
   },
   {
     id: 6,
     name: "Agua hidratante",
-    price: "$1800",
+    price: "$1.800",
     image: "/src/assets/imgs/photo-1722925541142-5db2668ca492.avif",
   },
 ];

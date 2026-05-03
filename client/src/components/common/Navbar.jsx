@@ -41,11 +41,7 @@ const Navbar = () => {
         <a onClick={() => scrollToSection("plans")}>Planes</a>
         <a onClick={() => scrollToSection("team")}>Equipo</a>
         <a onClick={() => scrollToSection("store")}>Tienda</a>
-        {user ? (
-          <a onClick={logout}>Cerrar sesión</a>
-        ) : (
-          <Link to="/login">Iniciar sesión</Link>
-        )}
+        <Link to="/profile" onClick={handleLinkClick}>Perfil</Link>
       </div>
 
       <div className="navbar-right">
@@ -71,7 +67,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menú mobile */}
       <div className={`menu-mobile ${open ? "show" : ""}`}>
         <button onClick={() => scrollToSection("about")}>Conócenos</button>
         <button onClick={() => scrollToSection("reviews")}>Reseñas</button>
