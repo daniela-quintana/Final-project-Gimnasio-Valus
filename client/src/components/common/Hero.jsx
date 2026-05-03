@@ -59,7 +59,13 @@ const Hero = () => {
                 </div>
                 <h2 className="hero-title">VALUS</h2>
                 <h3>FUERZA Y RENDIMIENTO</h3>
-                <Button onClick={""} />
+                <Button
+                  onClick={() =>
+                    document
+                      .getElementById("plans")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                />
               </div>
             </div>
           </SwiperSlide>

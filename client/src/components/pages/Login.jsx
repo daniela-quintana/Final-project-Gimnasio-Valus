@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import Button from "../common/Button";
 import "../../styles/Auth.css";
 
 const Login = () => {
@@ -38,9 +39,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="auth-btn" onClick={handleSubmit}>
-            Iniciar sesión
-          </button>
+          <Button onClick={handleSubmit} text="Iniciar sesión" />
         </div>
         <p className="auth-forgot">¿Olvidaste tu contraseña?</p>
         <p className="auth-footer">

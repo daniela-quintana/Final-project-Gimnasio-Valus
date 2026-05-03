@@ -71,12 +71,11 @@
   transform: scale(1.05);
 }
 
-.hero-content h2 {
+.hero-title {
   font-size: 64px;
   font-weight: 800;
   margin: 0;
   letter-spacing: -2px;
-  color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 

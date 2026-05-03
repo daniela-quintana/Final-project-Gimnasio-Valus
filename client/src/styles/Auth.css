@@ -31,21 +31,11 @@
 .auth-logo img {
   width: 60px;
   margin-bottom: 8px;
-}
-
-.auth-logo h2 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: 3px;
+  filter: invert(100%);
 }
 
 .auth-title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
   margin-bottom: 24px;
-  text-align: center;
 }
 
 .auth-form {
@@ -63,7 +53,6 @@
 }
 
 .form-group label {
-  color: #cccccc;
   font-size: 0.85rem;
 }
 
@@ -72,7 +61,6 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   padding: 12px 14px;
-  color: #ffffff;
   font-size: 0.95rem;
   outline: none;
   transition: border 0.2s;
@@ -80,23 +68,6 @@
 
 .form-group input:focus {
   border-color: #e07b20;
-}
-
-.auth-btn {
-  width: 100%;
-  background-color: #e07b20;
-  color: #ffffff;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.auth-btn:hover {
-  background-color: #c96d18;
 }
 
 .auth-forgot {
