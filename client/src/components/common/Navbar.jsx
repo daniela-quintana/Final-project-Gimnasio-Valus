@@ -1,34 +1,58 @@
 import { useState } from "react";
-import "../../styles/Navbar.css"
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import "../../styles/Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLinkClick = () => {
     setOpen(false);
   };
 
+  const scrollToSection = (id) => {
+    setOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src="/favicon.svg" alt="Logotipo Valus" />
-        </a>
+        </Link>
         <h2 className="title">VALUS</h2>
       </div>
 
       <div className="menu-desktop">
-        <a href="home">Home</a>
-        <a href="about">Conócenos</a>
-        <a href="reviews">Reseñas</a>
-        <a href="plans">Planes</a>
-        <a href="team">Equipo</a>
-        <a href="store">Tienda</a>
+        <a onClick={() => scrollToSection("about")}>Conócenos</a>
+        <a onClick={() => scrollToSection("reviews")}>Reseñas</a>
+        <a onClick={() => scrollToSection("plans")}>Planes</a>
+        <a onClick={() => scrollToSection("team")}>Equipo</a>
+        <a onClick={() => scrollToSection("store")}>Tienda</a>
+        {user ? (
+          <a onClick={logout}>Cerrar sesión</a>
+        ) : (
+          <Link to="/login">Iniciar sesión</Link>
+        )}
       </div>
 
       <div className="navbar-right">
-        {/* Icono de usuario */}
-        <div className="user-icon">
+        <div
+          className="user-icon"
+          onClick={() => navigate(user ? "/" : "/login")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
@@ -40,7 +64,6 @@ const Navbar = () => {
           </svg>
         </div>
 
-        {/* Hamburguesa */}
         <div className="hamburger" onClick={() => setOpen(!open)}>
           <span className={open ? "bar active" : "bar"}></span>
           <span className={open ? "bar active" : "bar"}></span>
@@ -50,24 +73,18 @@ const Navbar = () => {
 
       {/* Menú mobile */}
       <div className={`menu-mobile ${open ? "show" : ""}`}>
-        <a href="#home" onClick={handleLinkClick}>
-          Home
-        </a>
-        <a href="#about" onClick={handleLinkClick}>
-          Conócenos
-        </a>
-        <a href="#reviews" onClick={handleLinkClick}>
-          Reseñas
-        </a>
-        <a href="#plans" onClick={handleLinkClick}>
-          Planes
-        </a>
-        <a href="#team" onClick={handleLinkClick}>
-          Equipo
-        </a>
-        <a href="#store" onClick={handleLinkClick}>
-          Tienda
-        </a>
+        <button onClick={() => scrollToSection("about")}>Conócenos</button>
+        <button onClick={() => scrollToSection("reviews")}>Reseñas</button>
+        <button onClick={() => scrollToSection("plans")}>Planes</button>
+        <button onClick={() => scrollToSection("team")}>Equipo</button>
+        <button onClick={() => scrollToSection("store")}>Tienda</button>
+        {user ? (
+          <button onClick={logout}>Cerrar sesión</button>
+        ) : (
+          <Link to="/login" onClick={handleLinkClick}>
+            Iniciar sesión
+          </Link>
+        )}
       </div>
     </nav>
   );

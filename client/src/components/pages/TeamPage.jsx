@@ -25,7 +25,7 @@ const TeamPage = () => {
   return (
     <>
       <section className="team-section">
-        <h4 className="team-subtitle">¿Quienes somos?</h4>
+        <h4 className="team-subtitle">¿Quiénes somos?</h4>
         <h3 className="team-title">NUESTRO EQUIPO</h3>
 
         <div className="team-grid">
