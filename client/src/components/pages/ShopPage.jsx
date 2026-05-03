@@ -5,44 +5,44 @@ const products = [
     id: 1,
     name: "Barra proteíca",
     price: "$2.000",
-    image: "/src/assets/imgs/photo-1554886729-fe8d4499a108.avif",
+    image: "/src/assets/imgs/tienda5.avif",
   },
   {
     id: 2,
     name: "Agua hidratante",
     price: "$1.800",
-    image: "/src/assets/imgs/photo-1722925541142-5db2668ca492.avif",
+    image: "/src/assets/imgs/tienda6.avif",
   },
   {
     id: 3,
     name: "Galletas de proteína",
     price: "$1.800",
-    image: "/src/assets/imgs/photo-1621057621391-7ed446a24b41.avif",
+    image: "/src/assets/imgs/tienda1.avif",
   },
   {
     id: 4,
     name: "Creatina",
     price: "$1.800",
-    image: "/src/assets/imgs/premium_photo-1661284821625-9400498df354.avif",
+    image: "/src/assets/imgs/tienda2.avif",
   },
   {
     id: 5,
     name: "Barra proteíca",
     price: "$2.000",
-    image: "/src/assets/imgs/photo-1554886729-fe8d4499a108.avif",
+    image: "/src/assets/imgs/tienda3.avif",
   },
   {
     id: 6,
     name: "Agua hidratante",
     price: "$1.800",
-    image: "/src/assets/imgs/photo-1722925541142-5db2668ca492.avif",
+    image: "/src/assets/imgs/tienda4.avif",
   },
 ];
 
 const ShopPage = () => {
   return (
     <section className="shop-section">
-      <p className="shop-subtitle">Tienda</p>
+      <h4 className="shop-subtitle">Tienda</h4>
       <p className="shop-description">
         Disponible de manera presencial, consulta disponibilidad.
       </p>

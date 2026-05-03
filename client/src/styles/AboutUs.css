@@ -1,28 +1,28 @@
 .about-section {
-  background-color: #1a1a1a;
   padding: 60px 40px;
+  border-bottom: 1px solid var(--border);
 }
 
 .about-subtitle {
-  color: #e07b20;
+  /* color: #e07b20;
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1px; */
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .about-title {
-  color: #ffffff;
+  /* color: #ffffff;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 800; */
   text-transform: uppercase;
   margin-bottom: 15px;
 }
 
 .about-description {
-  color: #cccccc;
-  font-size: 1rem;
+  /* color: #cccccc;
+  font-size: 1rem; */
   max-width: 600px;
   margin-bottom: 40px;
   line-height: 1.6;
@@ -59,7 +59,7 @@
 }
 
 .about-card-title {
-  color: #ffffff;
+  color:var(--text);
   font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -67,7 +67,7 @@
 }
 
 .about-card-text {
-  color: #dddddd;
+  color: var(--text);
   font-size: 0.9rem;
   line-height: 1.6;
 }

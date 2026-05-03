@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Reviews.css";
+import Button from "../common/Button";
 
 const reviews = [
   {
@@ -9,7 +10,7 @@ const reviews = [
     stars: 5,
     quote:
       '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"',
-    image: "/src/assets/imgs/photo-1724160167551-2ffc3d7ca809.avif",
+    image: "/src/assets/imgs/review1.avif",
   },
   {
     id: 2,
@@ -17,7 +18,7 @@ const reviews = [
     stars: 5,
     quote:
       '"El mejor gimnasio en el que he entrenado, el equipo es increíble y los resultados hablan por sí solos"',
-    image: "/src/assets/imgs/premium_photo-1661284821625-9400498df354.avif",
+    image: "/src/assets/imgs/review2.avif",
   },
   {
     id: 3,
@@ -25,7 +26,7 @@ const reviews = [
     stars: 4,
     quote:
       '"Excelente ambiente, profesionales de primer nivel y una atención personalizada que marca la diferencia"',
-    image: "/src/assets/imgs/photo-1722925541142-5db2668ca492.avif",
+    image: "/src/assets/imgs/review3.avif",
   },
 ];
 
@@ -44,8 +45,8 @@ const ReviewsPage = () => {
 
   return (
     <section className="reviews-section">
-      <p className="reviews-subtitle">Reseñas</p>
-      <h2 className="reviews-title">Nuestros alumnos hablan</h2>
+      <h4 className="reviews-subtitle">Reseñas</h4>
+      <h3 className="reviews-title">Nuestros alumnos hablan</h3>
       <div className="reviews-card">
         <img src={review.image} alt={review.name} />
         <div className="reviews-card-overlay">
@@ -57,9 +58,7 @@ const ReviewsPage = () => {
           <span className="reviews-author">{review.name}</span>
         </div>
       </div>
-      <button className="reviews-btn" onClick={() => navigate("/feedback")}>
-        Deja tu comentario
-      </button>{" "}
+      <Button onClick={() => navigate("/feedback")} text="Deja tu comentario" />
     </section>
   );
 };

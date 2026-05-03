@@ -5,14 +5,17 @@
   font-weight: 600;
   border: none;
   border-radius: 10px;
-  padding: 18px 20px;
+  padding: 14px 36px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+  display: block;
+  margin: 0 auto;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
+  background-color: #c96d18;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 

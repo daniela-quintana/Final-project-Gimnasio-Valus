@@ -95,16 +95,18 @@
   pointer-events: auto;
 }
 
-.menu-mobile a {
+.menu-mobile button {
   padding: 15px 20px;
   border-top: 1px solid #3a3a3a;
   cursor: pointer;
   text-decoration: none;
   color: var(--text);
   transition: background 0.2s;
+  background: var(--bg);
+  opacity: 90%;
 }
 
-.menu-mobile a:hover {
+.menu-mobile button:hover {
   background: #3a3a3a;
 }
 

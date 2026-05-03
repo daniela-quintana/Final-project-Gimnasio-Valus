@@ -5,27 +5,27 @@ const features = [
     id: 1,
     title: "Fuerza y Rendimiento",
     text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: "/src/assets/imgs/photo-1554886729-fe8d4499a108.avif",
+    image: "/src/assets/imgs/aboutus1.avif",
   },
   {
     id: 2,
     title: "Fuerza y Rendimiento",
     text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: "/src/assets/imgs/photo-1545334894-9c7a7ccefaf8.avif",
+    image: "/src/assets/imgs/aboutus2.avif",
   },
   {
     id: 3,
     title: "Fuerza y Rendimiento",
     text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-    image: "/src/assets/imgs/photo-1621057621391-7ed446a24b41.avif",
+    image: "/src/assets/imgs/aboutus3.avif",
   },
 ];
 
 const AboutUsPage = () => {
   return (
     <section className="about-section">
-      <p className="about-subtitle">Conócenos</p>
-      <h2 className="about-title">¿Por qué entrenar con nosotros?</h2>
+      <h4 className="about-subtitle">Conócenos</h4>
+      <h3 className="about-title">¿Por qué entrenar con nosotros?</h3>
       <p className="about-description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.

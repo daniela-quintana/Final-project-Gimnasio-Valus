@@ -1,13 +1,9 @@
 .plans-section {
-  background-color: #1a1a1a;
+  border-bottom: 1px solid var(--border);
   padding: 60px 40px;
 }
 
 .plans-subtitle {
-  color: #e07b20;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -23,6 +19,7 @@
 .plan-item {
   padding: 30px 0;
   border-bottom: 1px solid #b0b0b0;
+  margin-bottom: 20px;
 }
 
 .plan-item:last-child {
@@ -38,11 +35,11 @@
 }
 
 .plan-title span:first-child {
-  color: #e07b20;
+  color: var(--orange);
 }
 
 .plan-title span:last-child {
-  color: #e07b20;
+  color: var(--orange);
   -webkit-text-stroke: 1px #e07b20;
   -webkit-text-fill-color: transparent;
 }
@@ -61,7 +58,7 @@
 }
 
 .plan-features li {
-  color: #222222;
+  color: var(--border);
   font-size: 0.95rem;
   margin-bottom: 6px;
 }
@@ -71,30 +68,16 @@
 }
 
 .plan-prices p {
-  color: #222222;
+  color: var(--border);
   font-size: 0.95rem;
   margin-bottom: 6px;
   white-space: nowrap;
 }
 
 .plans-btn {
-  display: block;
-  margin: 30px auto 0;
-  background-color: #e07b20;
-  color: #ffffff;
-  border: none;
-  padding: 14px 36px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
+  margin-top: 30px;
 }
 
-.plans-btn:hover {
-  background-color: #c96d18;
-}
 
 @media (max-width: 768px) {
   .plan-body {

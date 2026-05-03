@@ -1,4 +1,5 @@
 import "../../styles/Plans.css";
+import Button from "../common/Button";
 
 const plans = [
   {
@@ -39,7 +40,7 @@ const plans = [
 const PlansPage = () => {
   return (
     <section className="plans-section">
-      <p className="plans-subtitle">Planes</p>
+      <h4 className="plans-subtitle">Planes</h4>
       <div className="plans-container">
         {plans.map((plan) => (
           <div key={plan.id} className="plan-item">
@@ -62,7 +63,10 @@ const PlansPage = () => {
             </div>
           </div>
         ))}
-        <button className="plans-btn">Contáctanos</button>
+        <Button
+          onClick={() => console.log("Contactar")}
+          text="Contáctanos"
+        />
       </div>
     </section>
   );

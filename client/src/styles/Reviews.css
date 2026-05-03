@@ -1,21 +1,14 @@
 .reviews-section {
-  background-color: #1a1a1a;
+  border-bottom: 1px solid var(--border);
   padding: 60px 40px;
 }
 
 .reviews-subtitle {
-  color: #e07b20;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .reviews-title {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -49,14 +42,14 @@
 }
 
 .reviews-stars {
-  color: #e07b20;
+  color: var(--orange);
   font-size: 1.4rem;
   margin-bottom: 20px;
   letter-spacing: 4px;
 }
 
 .reviews-quote {
-  color: #ffffff;
+  color: var(--text);
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.7;
@@ -65,28 +58,9 @@
 }
 
 .reviews-author {
-  color: #ffffff;
+  color: var(--text);
   font-weight: 700;
   font-size: 1rem;
-}
-
-.reviews-btn {
-  display: block;
-  margin: 0 auto;
-  background-color: #e07b20;
-  color: #ffffff;
-  border: none;
-  padding: 14px 36px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.reviews-btn:hover {
-  background-color: #c96d18;
 }
 
 @media (max-width: 768px) {

@@ -1,19 +1,15 @@
 .shop-section {
-  background-color: #1a1a1a;
+  border-bottom: 1px solid var(--border);
   padding: 60px 40px;
 }
 
 .shop-subtitle {
-  color: #e07b20;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .shop-description {
-  color: #cccccc;
+  color: var(--text);
   font-size: 1rem;
   margin-bottom: 30px;
 }
@@ -52,14 +48,14 @@
 }
 
 .shop-card-name {
-  color: #ffffff;
+  color: var(--text);
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .shop-card-price {
-  color: #ffffff;
+  color: var(--text);
   font-size: 0.95rem;
 }
 
