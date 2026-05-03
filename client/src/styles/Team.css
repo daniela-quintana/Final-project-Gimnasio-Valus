@@ -1,19 +1,19 @@
 .team-section {
   padding: 60px 20px;
-  max-width: 1000px;
-  /* margin: 0 auto; */
-  text-align: left;
+  background-color: #1a1a1a;
   border-bottom: 1px solid var(--border);
 }
 
 .team-subtitle {
   margin-bottom: 5px;
   text-transform: uppercase;
+  padding-left: 40px;
 }
 
 .team-title {
   margin-bottom: 40px;
   text-transform: uppercase;
+  padding-left: 40px;
 }
 
 .team-grid {
@@ -21,6 +21,8 @@
   gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .team-card {

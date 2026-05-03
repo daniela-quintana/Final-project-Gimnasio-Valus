@@ -17,8 +17,8 @@ const Home = () => (
     <section id="about"><AboutUsPage /></section>
     <section id="reviews"><ReviewsPage /></section>
     <section id="plans"><PlansPage /></section>
-    <section id="team"><TeamPage /></section>
     <section id="store"><ShopPage /></section>
+    <section id="team"><TeamPage /></section>
   </>
 );
 
