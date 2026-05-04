@@ -9,11 +9,6 @@ const FeedbackPage = () => {
   const [comment, setComment] = useState("");
   const navigate = useNavigate();
 
-  // const handleSubmit = () => {
-  //   if (!comment || rating === 0) return;
-  //   navigate("/thanks");
-  // };
-
   const isFormValid = () => {
     return comment.trim() !== "" && rating > 0;
   };

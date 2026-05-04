@@ -60,7 +60,7 @@
 .bar {
   width: 24px;
   height: 3px;
-  background: white;
+  background:var(--text);
   transition: 0.3s;
 }
 
@@ -97,7 +97,7 @@
 
 .menu-mobile button {
   padding: 15px 20px;
-  border-top: 1px solid #3a3a3a;
+  border-top: 1px solid var(--border);
   cursor: pointer;
   text-decoration: none;
   color: var(--text);
@@ -107,7 +107,7 @@
 }
 
 .menu-mobile button:hover {
-  background: #3a3a3a;
+  background: var(--border);
 }
 
 .menu-desktop {
