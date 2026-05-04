@@ -1,0 +1,52 @@
+.feedback-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feedback-description {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.feedback-stars {
+  display: flex;
+  gap: 8;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.feedback-text-area {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: small;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text);
+  resize: none;
+  outline: none;
+}
+
+.thanks-title {
+  color: var(--orange);
+  font-size: medium;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.thanks-text {
+  color: var(--text);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.star {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.star.active {
+  color: #e07b20;
+}

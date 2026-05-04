@@ -65,6 +65,7 @@ const Hero = () => {
                       .getElementById("plans")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
+                  text="Empieza"
                 />
               </div>
             </div>
