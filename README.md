@@ -1,16 +1,37 @@
-# React + Vite
+# Final Project - Gimnasio 🏋️‍♂️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el proyecto final de gestión de gimnasio, desarrollado como una aplicación web full-stack que permite administrar socios, rutinas y servicios de manera eficiente.
 
-Currently, two official plugins are available:
+## 🚀 Estructura del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El repositorio está dividido en dos partes principales:
 
-## React Compiler
+* **Backend:** API construida con Node.js y Express, conectada a una base de datos PostgreSQL/MySQL.
+* **Frontend:** Interfaz de usuario interactiva desarrollada en JavaScript.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+* **Backend:** Node.js, Express, JavaScript.
+* **Frontend:** HTML5, CSS3, JavaScript.
+* **Base de Datos:** SQL (script incluido en la carpeta Backend).
+* **Seguridad:** Uso de variables de entorno (`.env`) y Middlewares.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📋 Requisitos Previos
+
+Antes de comenzar, asegúrate de tener instalado:
+* [Node.js](https://nodejs.org/)
+* Un gestor de base de datos SQL.
+
+## 🔧 Instalación y Configuración
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone: https://github.com/barbarasagredo/Final-project-Gimnasio-Valus
+👥 Colaboradores
+Este proyecto fue desarrollado con dedicación por:
+
+Gonzalo González
+
+Daniela Quintana
+
+Barbara Sagredo
