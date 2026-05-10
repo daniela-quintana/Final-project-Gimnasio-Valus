@@ -66,6 +66,7 @@ const Hero = () => {
                       .getElementById("plans")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
+                  className={"cta-button"}
                   text="Empieza"
                 />
               </div>

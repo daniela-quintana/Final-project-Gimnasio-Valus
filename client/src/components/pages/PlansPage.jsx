@@ -65,6 +65,7 @@ const PlansPage = () => {
         ))}
         <Button
           onClick={() => console.log("Contactar")}
+          className={"cta-button"}
           text="Contáctanos"
         />
       </div>

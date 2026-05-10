@@ -1,17 +1,18 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import Button from "../common/Button";
 import "../../styles/Auth.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const { login } = useContext(AuthContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    login({ email });
+  const handleSubmit = async () => {
+    if (!email || !password) return;
+    const data = await login(email, password);
+    if (data.message) setError(data.message);
   };
 
   return (
@@ -39,7 +40,10 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button onClick={handleSubmit} text="Iniciar sesión" />
+          {error && <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>}
+          <button className="auth-btn" onClick={handleSubmit}>
+            Iniciar sesión
+          </button>
         </div>
         <p className="auth-forgot">¿Olvidaste tu contraseña?</p>
         <p className="auth-footer">

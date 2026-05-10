@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import Button from "../common/Button";
 import "../../styles/Auth.css";
 
 const Register = () => {
@@ -9,12 +8,17 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { login } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const { register } = useContext(AuthContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) return;
-    login({ name, email });
+  const handleSubmit = async () => {
+    if (!name || !email || !password) return;
+    if (password !== confirmPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+    const data = await register(name, email, password);
+    if (data.message && !data.token) setError(data.message);
   };
 
   return (
@@ -58,7 +62,10 @@ const Register = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
-          <Button onClick={handleSubmit} text="Registrarse" />
+          {error && <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>}
+          <button className="auth-btn" onClick={handleSubmit}>
+            Registrarse
+          </button>
         </div>
         <p className="auth-footer">
           ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>

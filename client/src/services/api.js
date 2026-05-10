@@ -1,0 +1,36 @@
+const API_URL = "http://localhost:3000/api";
+
+export const registerUser = async (name, email, password) => {
+  const res = await fetch(`${API_URL}/auth/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password }),
+  });
+  return res.json();
+};
+
+export const loginUser = async (email, password) => {
+  const res = await fetch(`${API_URL}/auth/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  return res.json();
+};
+
+export const getReviews = async () => {
+  const res = await fetch(`${API_URL}/reviews`);
+  return res.json();
+};
+
+export const createReview = async (rating, comment, token) => {
+  const res = await fetch(`${API_URL}/reviews`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ rating, comment }),
+  });
+  return res.json();
+};

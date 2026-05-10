@@ -58,7 +58,11 @@ const ReviewsPage = () => {
           <span className="reviews-author">{review.name}</span>
         </div>
       </div>
-      <Button onClick={() => navigate("/feedback")} text="Deja tu comentario" />
+      <Button
+        className={"cta-button"}
+        onClick={() => navigate("/feedback")}
+        text="Deja tu comentario"
+      />
     </section>
   );
 };
