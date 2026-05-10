@@ -1,16 +1,89 @@
-# React + Vite
+# Gimnasio Valus - Backend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requisitos previos
 
-Currently, two official plugins are available:
+Antes de comenzar asegúrate de tener instalado:
+- [Node.js](https://nodejs.org) versión 20 o superior
+- [PostgreSQL](https://www.postgresql.org/download/) versión 14 o superior
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Instalación paso a paso
 
-## React Compiler
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/barbarasagredo/Final-project-Gimnasio-Valus
+cd Final-project-Gimnasio-Valus
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Instalar dependencias del servidor
+```bash
+cd server
+npm install
+```
 
-## Expanding the ESLint configuration
+### 3. Crear la base de datos
+Abre una terminal y corre:
+```bash
+psql postgres -f script.sql
+```
+Esto creará automáticamente la base de datos y las tablas necesarias.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Configurar variables de entorno
+Crea un archivo llamado `.env` dentro de la carpeta `server` con este contenido:
+
+PORT=3000
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=gimnasio_valus
+DB_USER=postgres
+DB_PASSWORD=
+JWT_SECRET=gimnasio_valus_secret_key
+
+> Si tu PostgreSQL tiene contraseña, agrégala en `DB_PASSWORD`.
+> Si tu usuario de PostgreSQL no es `postgres`, cámbialo en `DB_USER`. Para saber tu usuario corre `psql postgres -c "SELECT current_user;"` en la terminal.
+
+### 5. Iniciar el servidor
+```bash
+npm run dev
+```
+
+Si todo está bien verás:
+
+## Instalación del cliente
+
+Abre otra terminal y corre:
+```bash
+cd client
+npm install
+npm run dev
+```
+
+El cliente estará disponible en http://localhost:5173
+
+## Comandos disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Inicia el servidor en modo desarrollo |
+| `npm start` | Inicia el servidor en modo producción |
+| `npm test` | Corre los tests |
+
+## Estructura del proyecto
+
+server/
+├── config/          # Configuración de la base de datos
+├── controllers/     # Lógica de cada ruta
+├── middlewares/     # Validación de tokens
+├── routes/          # Definición de rutas
+├── script.sql       # Script para crear la base de datos
+├── index.js         # Entrada principal del servidor
+└── .env.example     # Ejemplo de variables de entorno
+
+## Rutas disponibles
+
+| Método | Ruta | Descripción | Requiere token |
+|--------|------|-------------|----------------|
+| POST | /api/auth/register | Registrar usuario | No |
+| POST | /api/auth/login | Iniciar sesión | No |
+| GET | /api/reviews | Ver reseñas | No |
+| POST | /api/reviews | Crear reseña | Si |
+| DELETE | /api/reviews/:id | Eliminar reseña | Si |

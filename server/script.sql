@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS gimnasio_valus;
 CREATE DATABASE gimnasio_valus;
 
 \c gimnasio_valus
