@@ -15,7 +15,7 @@ const ThanksPage = () => {
           Tu opinión es muy importante para nosotros y nos ayuda a seguir
           mejorando. ¡Nos alegra que seas parte de Valus!
         </p>
-        <Button onClick={() => navigate("/")} text=" Volver al inicio" />
+        <Button onClick={() => navigate("/")} text=" Volver al inicio" className={"cta-button"}/>
       </div>
     </div>
   );
