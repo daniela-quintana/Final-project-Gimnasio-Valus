@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "../../styles/Auth.css";
+import Button from "../common/Button";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -62,10 +63,14 @@ const Register = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
-          {error && <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>}
-          <button className="auth-btn" onClick={handleSubmit}>
-            Registrarse
-          </button>
+          {error && (
+            <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>
+          )}
+          <Button
+            className={"cta-button"}
+            onClick={handleSubmit}
+            text="Registrarse"
+          />
         </div>
         <p className="auth-footer">
           ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>

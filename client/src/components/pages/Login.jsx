@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import Button from "../common/Button";
 import "../../styles/Auth.css";
 
 const Login = () => {
@@ -40,10 +41,14 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          {error && <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>}
-          <button className="auth-btn" onClick={handleSubmit}>
-            Iniciar sesión
-          </button>
+          {error && (
+            <p style={{ color: "#ff6b6b", fontSize: "0.85rem" }}>{error}</p>
+          )}
+          <Button
+            className={"cta-button"}
+            onClick={handleSubmit}
+            text="Iniciar sesión"
+          />
         </div>
         <p className="auth-forgot">¿Olvidaste tu contraseña?</p>
         <p className="auth-footer">
