@@ -1,4 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Hero from "./components/common/Hero";
@@ -12,18 +14,23 @@ import Register from "./components/pages/Register";
 import FeedbackPage from "./components/pages/FeedbackPage";
 import ThanksPage from "./components/pages/ThanksPage";
 import ProfilePage from "./components/pages/ProfilePage";
+import ProtectedRoute from "./components/common/ProtectedRoute";
 import "./App.css";
 
-const Home = () => (
-  <>
-    <Hero />
-    <section id="about"><AboutUsPage /></section>
-    <section id="reviews"><ReviewsPage /></section>
-    <section id="plans"><PlansPage /></section>
-    <section id="team"><TeamPage /></section>
-    <section id="store"><ShopPage /></section>
-  </>
-);
+const Home = () => {
+  const { user } = useContext(AuthContext);
+
+  return (
+    <>
+      <Hero />
+      <section id="about"><AboutUsPage /></section>
+      <section id="reviews"><ReviewsPage /></section>
+      <section id="plans"><PlansPage /></section>
+      <section id="team"><TeamPage /></section>
+      {user && <section id="store"><ShopPage /></section>}
+    </>
+  );
+};
 
 function App() {
   return (
@@ -35,7 +42,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/feedback" element={<FeedbackPage />} />
         <Route path="/thanks" element={<ThanksPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile" element={
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        } />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

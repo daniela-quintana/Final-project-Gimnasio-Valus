@@ -41,16 +41,18 @@ const Navbar = () => {
         <a onClick={() => scrollToSection("reviews")}>Reseñas</a>
         <a onClick={() => scrollToSection("plans")}>Planes</a>
         <a onClick={() => scrollToSection("team")}>Equipo</a>
-        <a onClick={() => scrollToSection("store")}>Tienda</a>
-        <Link to="/profile" onClick={handleLinkClick}>
-          Perfil
-        </Link>
+        {user && <a onClick={() => scrollToSection("store")}>Tienda</a>}
+        {user && (
+          <Link to="/profile" onClick={handleLinkClick}>
+            Perfil
+          </Link>
+        )}
       </div>
 
       <div className="navbar-right">
         <div
           className="user-icon"
-          onClick={() => navigate(user ? "/" : "/login")}
+          onClick={() => navigate(user ? "/profile" : "/login")}
         >
           <UserIcon />
         </div>
@@ -66,7 +68,7 @@ const Navbar = () => {
         <button onClick={() => scrollToSection("reviews")}>Reseñas</button>
         <button onClick={() => scrollToSection("plans")}>Planes</button>
         <button onClick={() => scrollToSection("team")}>Equipo</button>
-        <button onClick={() => scrollToSection("store")}>Tienda</button>
+        {user && <a onClick={() => scrollToSection("store")}>Tienda</a>}
         {user ? (
           <button onClick={logout}>Cerrar sesión</button>
         ) : (
