@@ -1,9 +1,9 @@
 import "../../styles/Button.css";
 
-const Button = ({ text, disabled, onClick }) => {
+const Button = ({ text, disabled, onClick, className }) => {
   return (
     <>
-      <button className="cta-button" onClick={onClick} disabled={disabled}>
+      <button className={className} onClick={onClick} disabled={disabled}>
         {text}
       </button>
     </>
